@@ -3,6 +3,7 @@ import { IntegrationService } from '../../services/integration.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { LoginRequest } from '../../models/login-request';
 import { Router } from '@angular/router';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private integration: IntegrationService) {}
+  constructor(private integration: IntegrationService,  private storage : LocalStorageService) {}
 
   userForm : FormGroup =  new FormGroup({
     username: new FormControl(''),
@@ -24,6 +25,9 @@ export class LoginComponent {
   request: LoginRequest = new LoginRequest;
 
   login() {
+
+    this.storage.remove('auth-key');
+    
     const formValue =  this.userForm.value;
 
     if(formValue.username == '' || formValue.password == '') {
@@ -38,9 +42,12 @@ export class LoginComponent {
       next:(res) => {
         console.log("Received Response:"+res.token);
 
+        this.storage.set('auth-key', res.token);
+
         this.router.navigateByUrl('dashboard');
       }, error: (err) => {
         console.log("Error Received Response:"+err);
+        this.storage.remove('auth-key');
       }
     });
   }
