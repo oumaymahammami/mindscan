@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IntegrationService } from '../../services/integration.service';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LoginRequest } from '../../models/login-request';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
@@ -17,8 +17,8 @@ export class LoginComponent {
   constructor(private integration: IntegrationService,  private storage : LocalStorageService) {}
 
   userForm : FormGroup =  new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('')
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', [Validators.required, Validators.minLength(4)])
   });
 
   router = inject(Router);

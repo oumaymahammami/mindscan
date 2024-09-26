@@ -106,3 +106,8 @@ img {
 .register p a:hover {
     color: #000dff;
 }
+
+.text-danger {
+    color: red;
+    font-size: 12px;
+}
