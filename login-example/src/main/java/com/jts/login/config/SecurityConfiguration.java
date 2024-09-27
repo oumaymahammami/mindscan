@@ -35,11 +35,8 @@ public class SecurityConfiguration {
 		return http.csrf(c -> c.disable())
 				.authorizeHttpRequests(req -> 
 				req.requestMatchers("/api/doLogin").permitAll()
-				.requestMatchers("/movie/**").hasAnyAuthority("ROLE_ADMIN")
-				.requestMatchers("/show/**").hasAnyAuthority("ROLE_ADMIN")
-				.requestMatchers("/theater/**").hasAnyAuthority("ROLE_ADMIN")
-				.requestMatchers("/ticket/**").hasAnyAuthority("ROLE_USER")
-				.anyRequest().authenticated())
+				.requestMatchers("/api/**")
+				.authenticated())
 			.sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 			.authenticationProvider(authenticationProvider())
 			.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class).build();

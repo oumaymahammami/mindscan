@@ -4,7 +4,7 @@ import { LoginRequest } from '../models/login-request';
 import { Observable } from 'rxjs';
 import { LoginResponse } from '../models/login-response';
 
-const API_URL = "http://localhost:8080/api/doLogin";
+const BASE_URL = "http://localhost:8080/api";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,10 @@ export class IntegrationService {
   constructor(private http: HttpClient) { }
 
   doLogin(request: LoginRequest):Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(API_URL, request);
+    return this.http.post<LoginResponse>(BASE_URL + "/doLogin", request);
+  }
+
+  dashboard(): Observable<any> {
+    return this.http.get<any>(BASE_URL + "/dashboard");
   }
 }

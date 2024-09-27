@@ -44,7 +44,16 @@ export class LoginComponent {
 
         this.storage.set('auth-key', res.token);
 
-        this.router.navigateByUrl('dashboard');
+        this.integration.dashboard().subscribe({
+          next: (dashboardres) => {
+            console.log("Dashboard res:"+dashboardres.response);
+
+            this.router.navigateByUrl('dashboard');
+          }, error : (err) => {
+            console.log("Dashboard error received :" + err); 
+            this.storage.remove('auth-key');
+          }
+        });
       }, error: (err) => {
         console.log("Error Received Response:"+err);
         this.storage.remove('auth-key');
