@@ -17,6 +17,9 @@ import com.jts.login.config.JWTService;
 import com.jts.login.dto.DashboardResponse;
 import com.jts.login.dto.LoginRequest;
 import com.jts.login.dto.LoginResponse;
+import com.jts.login.dto.SignupRequest;
+import com.jts.login.dto.SignupResponse;
+import com.jts.login.service.LoginService;
 
 @RestController
 @RequestMapping("/api")
@@ -28,6 +31,9 @@ public class LoginController {
 
 	@Autowired
 	private JWTService jwtService;
+	
+	@Autowired
+	private LoginService loginService;
 
 	@PostMapping("/doLogin")
 	public ResponseEntity<LoginResponse> doLogin(@RequestBody LoginRequest request) {
@@ -51,5 +57,10 @@ public class LoginController {
 		System.out.println("Dashboard Response");
 		
 		return new ResponseEntity<>(response, HttpStatus.OK);
+	}
+	
+	@PostMapping("/doRegister")
+	public ResponseEntity<SignupResponse> doRegister(@RequestBody SignupRequest request) {
+		return new ResponseEntity<>(loginService.doRegister(request), HttpStatus.CREATED);
 	}
 }
