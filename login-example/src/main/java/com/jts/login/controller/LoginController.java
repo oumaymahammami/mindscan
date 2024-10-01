@@ -23,7 +23,7 @@ import com.jts.login.service.LoginService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+//@CrossOrigin
 public class LoginController {
 
 	@Autowired
