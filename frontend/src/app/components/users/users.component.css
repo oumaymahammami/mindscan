@@ -1,0 +1,118 @@
+/* Centering the section */
+.users-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    min-height: 100vh;  /* Ensures the section takes the full height of the viewport */
+    margin: 0;
+    background-color: #f4f6f9;  /* Optional: Set a light background for the page */
+  }
+  
+  /* Styling for each form box */
+  .form-box {
+    background-color: #f0f9ff; /* Soft light blue */
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 300px;  /* Fixed width for each form box */
+    height: 350px;  /* Fixed height for each form box */
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content vertically */
+  }
+  
+  /* Hover effect for the form box */
+  .form-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Heading inside the form box */
+  .form-box h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;  /* Add some letter spacing for a neat effect */
+    text-transform: uppercase; /* Optional: make the headings uppercase */
+  }
+  
+  /* Form styling inside the form box */
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Added more space between form elements */
+    height: 100%;  /* Ensures the form takes up the full height of the box */
+    justify-content: space-between; /* Distribute the content evenly within the box */
+  }
+  
+  /* Input field styling */
+  .form-box input {
+    padding: 0.9rem;
+    border-radius: 0.75rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #fff; /* White background for inputs */
+    color: #333;  /* Dark text color for readability */
+    box-sizing: border-box;  /* Ensures padding doesn’t affect overall width */
+  }
+  
+  /* Focus effect for input fields */
+  .form-box input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+    outline: none;
+  }
+  
+  /* Placeholder styling */
+  .form-box input::placeholder {
+    color: #888; /* Subtle color for placeholder text */
+    font-style: italic; /* Italicize the placeholder text */
+  }
+  
+  /* Button styling */
+  .form-box button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase; /* Make button text uppercase */
+  }
+  
+  /* Button hover effect */
+  .form-box button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+  }
+  
+  /* Button focus effect */
+  .form-box button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .users-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-box {
+      width: 90%;  /* Make the form boxes take up more width on small screens */
+      max-width: 400px;  /* Set a maximum width */
+    }
+  }
+  

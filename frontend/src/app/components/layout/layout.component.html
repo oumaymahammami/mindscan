@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo & Brand -->
+    <div class="navbar-brand">
+      <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span class="material-icons">menu</span>
+      </button>
+      <a [routerLink]="['/']" class="brand-link">
+        <img *ngIf="logoUrl" [src]="logoUrl" alt="Logo" class="brand-logo" />
+        <span class="brand-name">{{ appName }}</span>
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="navbar-links" [class.active]="isMenuOpen">
+      <ul class="nav-list">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a
+            [routerLink]="[item.route]"
+            routerLinkActive="active"
+            class="nav-link"
+            (click)="closeMenu()"
+          >
+            <i *ngIf="item.icon" class="material-icons nav-icon">{{ item.icon }}</i>
+            <span>{{ item.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sign In -->
+    <div class="navbar-auth">
+      <a [routerLink]="['/login']" class="signin-button">
+        <i class="material-icons"></i>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="navbar-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+
+<router-outlet></router-outlet>

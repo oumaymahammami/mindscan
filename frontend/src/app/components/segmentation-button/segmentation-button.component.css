@@ -1,0 +1,55 @@
+.segmentation-container {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Stylish Button */
+.segmentation-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.segmentation-btn:hover {
+  background: linear-gradient(135deg, #0097a7, #00838f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 188, 212, 0.5);
+}
+
+/* Response Message */
+.segmentation-response {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #2196f3;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional animated pulse during loading */
+.segmentation-response.loading {
+  animation: pulse 1s infinite ease-in-out;
+  color: #00acc1;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Success & Error styles */
+.segmentation-response.success {
+  color: #4caf50;
+}
+
+.segmentation-response.error {
+  color: #f44336;
+}

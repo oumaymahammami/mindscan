@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9fbfc, #eef3f9);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: 1.5rem auto;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+:host(:hover) {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Adds a more pronounced shadow on hover */
+}
+
+.upload-container {
+  width: 100%;
+  text-align: center;
+}
+
+.file-type {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #244769;
+  margin-bottom: 1.2rem;
+}
+
+.upload-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2a8dd2, #195c9e);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 97, 186, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: linear-gradient(135deg, #1d76b3, #144a80);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 97, 186, 0.4); /* More pronounced shadow on hover */
+}
+
+.upload-btn i {
+  margin-right: 0.5rem;
+}
+
+.upload-response {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4caf50;
+  word-wrap: break-word;
+}
+
+.upload-response.error {
+  color: #e53935;
+}

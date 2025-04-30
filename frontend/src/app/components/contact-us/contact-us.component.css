@@ -1,0 +1,110 @@
+/* Contact Us Page Styles */
+.contact-us-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7ff;
+  font-family: 'Arial', sans-serif;
+  margin-top: 80px; /* Added margin to push the form down */
+}
+
+.contact-us-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-us-title {
+  font-size: 2rem;
+  color: #02537e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-us-subtitle {
+  font-size: 1rem;
+  color: #7a7a7a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0066cc; /* Pretty blue color */
+  outline: none;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0096c7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.submit-button:hover {
+  background-color: #0078a5;
+}
+
+.submit-button:disabled {
+  background-color: #aaa;
+}
+
+.success-message {
+  color: #28a745;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

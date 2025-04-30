@@ -1,0 +1,30 @@
+<section class="users-section">
+    <div class="form-box">
+      <h2><i class="fas fa-user-md"></i> Doctor</h2>
+      <p class="form-description">Please enter the Doctor's ID to continue</p>
+      <form action="/segmentation" method="get">
+        <input type="text" name="doctor_id" placeholder="Doctor ID" required>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  
+    <div class="form-box">
+      <h2><i class="fas fa-microscope"></i> Scanner</h2>
+      <p class="form-description">Please enter the Scanner ID and the associated Doctor ID</p>
+      <form action="/segmentation" method="get">
+        <input type="text" name="scanner_id" placeholder="Scanner ID" required>
+        <input type="text" name="doctor_id" placeholder="Doctor ID" required>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  
+    <div class="form-box">
+      <h2><i class="fas fa-user-shield"></i> Admin</h2>
+      <p class="form-description">Please enter the Admin's ID to proceed</p>
+      <form action="/admin" method="get">
+        <input type="text" name="admin_id" placeholder="Admin ID" required>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  </section>
+  

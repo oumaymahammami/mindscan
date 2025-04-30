@@ -1,0 +1,12 @@
+<div class="upload-container">
+  <p class="file-type">{{ typeIMG }}</p>
+
+  <label class="upload-btn">
+    <i class="fa fa-upload"></i> Upload File
+    <input type="file" (change)="onFileSelected($event)" hidden />
+  </label>
+
+  <p class="upload-response" [class.error]="uploadResponse === 'Upload failed.'">
+    {{ uploadResponse }}
+  </p>
+</div>

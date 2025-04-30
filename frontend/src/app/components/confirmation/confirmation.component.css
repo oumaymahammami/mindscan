@@ -1,0 +1,44 @@
+/* Full viewport height to center vertically */
+.confirmation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Leaves space for navbar */
+  background: #f9f9f9;
+}
+
+.confirmation-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.confirmation-card h2 {
+  color: #02537e;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.confirmation-card p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.back-home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0096c7;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.back-home-button:hover {
+  background-color: #0096c7;
+}

@@ -1,0 +1,31 @@
+<div class="slice-section">
+  <p class="section-title">Generate Slice</p>
+
+  <div class="controls">
+    <select [(ngModel)]="orientation" class="select-control">
+      <option value="axial">Axial</option>
+      <option value="coronal">Coronal</option>
+      <option value="sagittal">Sagittal</option>
+    </select>
+
+    <input type="number" [(ngModel)]="selectedSlice" placeholder="Enter slice number" class="input-control" />
+
+    <button (click)="DoVisualizeSlice()" class="slice-btn">Visualize Slice</button>
+  </div>
+
+  <div *ngIf="segmentationImgUrl" class="result">
+    <h4>Result:</h4>
+    <img [src]="segmentationImgUrl" alt="Segmentation Slice" />
+  </div>
+</div>
+<div class="segmentation-legend">
+  <p class="legend-title">🧠 Class Labels:</p>
+  <ul class="legend-list">
+    <li><span class="color-box enhancing"></span><span class="label-text">(3): Enhancing Tumor</span></li>
+    <li><span class="color-box edema"></span><span class="label-text">(2): Edema</span></li>
+    <li><span class="color-box necrotic"></span><span class="label-text">(1): Necrotic</span></li>
+    <li><span class="color-box bg"></span><span class="label-text">(0): Background</span></li>
+  </ul>
+</div>
+
+

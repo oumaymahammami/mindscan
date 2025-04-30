@@ -1,0 +1,4 @@
+<div class="segmentation-container">
+  <button class="segmentation-btn" (click)="DoSegmentation()">Start Segmentation</button>
+  <p class="segmentation-response" [class.loading]="loading">{{ uploadResponse }}</p>
+</div>

@@ -1,0 +1,107 @@
+/* General Page */
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0077b6, #015689, #02537e);
+  padding: 20px;
+}
+
+.signup-card {
+  background: #fff;
+  padding: 20px 50px;
+  border-radius: 12px;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Titles */
+.card-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0077b6;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-title span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-title a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  width: 92%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+.form-group input[type="submit"] {
+  background: #0077b6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 12px;
+  width: auto;
+}
+
+.form-group input[type="submit"]:hover {
+  background: #0077b6;
+}
+
+/* Errors */
+.text-danger {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/* Terms */
+.card-terms {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.card-terms input {
+  margin-right: 5px;
+}
+
+.card-terms a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.card-terms a:hover {
+  text-decoration: underline;
+}

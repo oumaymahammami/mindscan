@@ -1,0 +1,88 @@
+<div class="admin-container">
+    <h1>🧠 Segmentation Dashboard</h1>
+  
+    <section class="metrics-section">
+      <h2>Model Performance</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Class Label</th>
+            <th>Dice Score</th>
+            <th>IoU</th>
+            <th>Sensitivity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enhancing Tumor (3)</td>
+            <td>0.85</td>
+            <td>0.75</td>
+            <td>0.88</td>
+          </tr>
+          <tr>
+            <td>Edema (2)</td>
+            <td>0.79</td>
+            <td>0.68</td>
+            <td>0.82</td>
+          </tr>
+          <tr>
+            <td>Necrotic (1)</td>
+            <td>0.71</td>
+            <td>0.62</td>
+            <td>0.74</td>
+          </tr>
+          <tr>
+            <td>Background (0)</td>
+            <td>0.99</td>
+            <td>0.98</td>
+            <td>0.99</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+    <section class="profiles-section">
+      <div class="profile-card">
+        <h3>📊 Scanners Summary</h3>
+        <p>Total Scanners: <strong>12</strong></p>
+        <p>Avg Uploads per Week: <strong>25</strong></p>
+        <p>Top Scanner: <strong>Scanner-07</strong></p>
+      </div>
+      <div class="profile-card">
+        <h3>👨‍⚕️ Doctors Summary</h3>
+        <p>Total Doctors: <strong>8</strong></p>
+        <p>Avg Annotations per Week: <strong>40</strong></p>
+        <p>Most Active: <strong>Dr. Amal B.</strong></p>
+      </div>
+    </section>
+  </div>
+  <section class="user-management">
+    <h2>👥 User Management</h2>
+  
+    <input type="text" placeholder="Search by name or email..." [(ngModel)]="searchTerm" class="search-input" />
+  
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredUsers(); let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <button (click)="editUser(user)">✏️ Edit</button>
+            <button (click)="deleteUser(user.id)">🗑️ Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
