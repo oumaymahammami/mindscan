@@ -23,8 +23,9 @@ export class LayoutComponent implements OnInit {
 
   navItems: NavItem[] = [
     { label: "Home", route: "/home" },
-    { label: "About", route: "/about"},
+    { label: "About", route: "/about" },
     { label: "Segmentation", route: "/login" },
+    { label: "Admin", route: "/admin-login" }
   ];
 
   ngOnInit(): void {}
