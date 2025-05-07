@@ -13,7 +13,8 @@ import { SegmentationButtonComponent } from "./components/segmentation-button/se
 import { GenerateSliceComponent } from "./components/generate-slice/generate-slice.component"
 import { ConfirmationComponent } from "./components/confirmation/confirmation.component"
 import { UsersComponent } from "./components/users/users.component"
-import { AdminComponent } from "./components/admin/admin.component"  // ✅ NEW IMPORT
+import { AdminComponent } from "./components/admin/admin.component"
+import { AdminLoginComponent } from "./components/admin-login/admin-login.component"
 
 import { AuthGuard } from "./guards/auth.guard"
 
@@ -34,7 +35,8 @@ export const routes: Routes = [
       { path: "segmentation-button", component: SegmentationButtonComponent },
       { path: "generate-slice", component: GenerateSliceComponent },
       { path: "users", component: UsersComponent },
-      { path: "admin", component: AdminComponent, canActivate: [AuthGuard] }  // ✅ NEW ROUTE
+      { path: "admin", component: AdminComponent, canActivate: [AuthGuard] },
+      { path: "admin-login", component: AdminLoginComponent, canActivate: [AuthGuard] }
     ],
   },
 ]
