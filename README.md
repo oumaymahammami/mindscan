@@ -17,7 +17,7 @@ To ensure the model's practical usability, we integrated it into a full-stack we
 - **Model Integration**: Flask – serving the trained nnU-Netv2 model.
 - **Database**: PostgreSQL – to securely store patient data, MRI scans, and segmentation results.
 
-**MindScan** is designed to assist **doctors** and **radiologists**, offering a seamless experience from scan upload to tumor visualization. It accelerates diagnostic workflows and improves the efficiency of brain tumor monitoring by providing accurate, real-time results.
+**MindScan** is designed to assist **doctors** and **radiologists**, offering a seamless experience from scan upload to tumor visualization. It accelerates diagnostic workflows and improves the efficiency of brain tumor monitoring by providing accurate, real-time results. 
 
 ---
 
