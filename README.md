@@ -5,6 +5,9 @@ This project focuses on enhancing brain tumor segmentation through a fine-tuned 
 We trained and evaluated the model on **BraTS 2020** and **BraTS 2021** datasets, using both standard and ResEnc nnU-Net configurations. To further boost performance, we applied ensemble techniques—**Max Probability** and **Probability Averaging**—which combine outputs from multiple models to generate smoother and more accurate segmentation maps.
 
 A user-friendly interface has been developed to make this tool accessible for **medical professionals**, allowing for fast and reliable MRI analysis and tumor visualization.
+### 🎥 Demo Video
+
+[Watch Demo Video](https://drive.google.com/file/d/1a3h3RMWyfjiKHZHKxSVRLiBiGyP5dmg7/view?usp=sharing)
 
 ---
 
